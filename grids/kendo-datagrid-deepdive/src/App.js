@@ -2,14 +2,16 @@ import * as React from 'react';
 // import SoftwareVerGrid from './components/custom-sort-compare/SoftwareVerGrid';
 import './App.css';
 import '@progress/kendo-theme-default/dist/all.css';
-import ProductFiltering from './components/filtering-basics/ProductFiltering';
+// import ProductFiltering from './components/filtering-basics/ProductFiltering';
+import ProductsGrid from './components/external-filters';
 
 function App() {
 	
 	return (
 		<div className="App">
 			<h1>Welcome to my Deep-dive into Kendo DataGrid!</h1>
-			<ProductFiltering />
+			<ProductsGrid />
+			{/* <ProductFiltering /> */}
 			{/* <SoftwareVerGrid /> */}
 		</div>
 	);
