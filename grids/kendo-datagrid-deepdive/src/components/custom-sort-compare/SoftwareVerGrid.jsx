@@ -78,7 +78,7 @@ function SoftwareVerGrid() {
 	const onDataStateChange = (e) => {
 		if (e.dataState.sort) {
 			e.dataState.sort = e.dataState.sort.map((sort) => {
-				if (sort.field == "version") {
+				if (sort.field === "version") {
 					return {
 						...sort, 
 						compare: (a, b) => customVersionCompare(a, b, sort.dir),
@@ -94,7 +94,7 @@ function SoftwareVerGrid() {
 	return (
 		<Grid
 			style={{
-				height: "420px",
+				height: "350px",
 			}}
 			data={dataResult}
 			sortable={true}
@@ -105,11 +105,6 @@ function SoftwareVerGrid() {
 			<Column field="ProductID" title="Product Id" filter={"numeric"} />
 			<Column field="version" />
 		</Grid>
-	);
-
-	return (
-		<>
-		</>
 	);
 }
 
