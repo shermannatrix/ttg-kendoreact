@@ -6,7 +6,7 @@ import {
 } from '@progress/kendo-react-grid';
 import { Input } from '@progress/kendo-react-inputs';
 import { filterBy } from '@progress/kendo-data-query';
-import {sampleProducts as products} from '../../data/sample-products';
+import {sampleProducts as products} from '../../../data/sample-products';
 
 function ProductsGrid() {
 	const [data, setData] = useState(products);

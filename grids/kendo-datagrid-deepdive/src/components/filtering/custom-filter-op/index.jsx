@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { filterBy } from '@progress/kendo-data-query';
-import { sampleProducts as products } from '../../data/sample-products';
+import { sampleProducts as products } from '../../../data/sample-products';
 
 const initialFilter = {
 	logic: "and",

@@ -3,7 +3,7 @@ import {
 	GridColumnMenuFilter,
 	GridColumnMenuCheckboxFilter
 } from '@progress/kendo-react-grid';
-import { sampleProducts } from '../../data/sample-products';
+import { sampleProducts } from '../../../data/sample-products';
 
 export const ColumnMenu = (props) => {
 	return (
