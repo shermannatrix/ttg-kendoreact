@@ -3,7 +3,7 @@ import * as React from 'react';
 import './App.css';
 import '@progress/kendo-theme-default/dist/all.css';
 // import ProductFiltering from './components/filtering-basics/ProductFiltering';
-import ProductsGrid from './components/external-filters';
+import ProductsGrid from './components/custom-filter-op';
 
 function App() {
 	
