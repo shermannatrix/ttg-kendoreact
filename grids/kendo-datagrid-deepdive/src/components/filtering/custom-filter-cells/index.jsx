@@ -6,7 +6,7 @@ import {
 import { filterBy } from '@progress/kendo-data-query';
 import { RangeFilterCell } from './rangeFilterCell';
 import { DropDownFilterCell } from './dropdownFilterCell';
-import { sampleProducts as products } from '../../data/sample-products';
+import { sampleProducts as products } from './../../../data/sample-products';
 
 const categories = Array.from(
 	new Set(
