@@ -8,7 +8,7 @@ import {
 	FormCheckbox,
 	FormMaskedTextBox,
 	FormTextArea
-} from './form-components';
+} from '../form-components';
 import { 
 	termsValidator,
 	emailValidator,
@@ -17,7 +17,7 @@ import {
 	guestsValidator,
 	nightsValidator,
 	arrivalDateValidator
-} from './validators';
+} from '../form-components/validators';
 
 function FormsAndLabels() {
 	const handleSubmit = (dataItem) =>
