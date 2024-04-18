@@ -1,12 +1,13 @@
 import React from 'react';
-import { Calendar } from '@progress/kendo-react-dateinputs';
+import '@progress/kendo-theme-material/dist/all.css';
+import SimpleForm from './components/simple-form';
 import './App.css';
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Hello KendoReact!</h1>
-			<Calendar />
+			<h1>Getting Started with the Form Component in KendoReact!</h1>
+			<SimpleForm />
 		</div>
 	);
 }
