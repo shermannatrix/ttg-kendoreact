@@ -8,7 +8,7 @@ import {
 } from "@progress/kendo-react-data-tools";
 import { filterBy } from "@progress/kendo-data-query";
 import { Grid, GridColumn } from "@progress/kendo-react-grid";
-import { sampleProducts as products } from "../../data/sample-products";
+import { sampleProducts as products } from "../../../data/sample-products";
 
 const initialFilter = {
   logic: "and",

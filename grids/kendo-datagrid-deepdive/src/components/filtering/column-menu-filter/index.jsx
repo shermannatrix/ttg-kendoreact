@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { process } from '@progress/kendo-data-query';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { ColumnMenu, ColumnMenuCheckboxFilter } from './columnMenu';
-import { sampleProducts as products } from '../../data/sample-products';
+import { sampleProducts as products } from '../../../data/sample-products';
 
 const createDataState = (dataState) => {
 	return {

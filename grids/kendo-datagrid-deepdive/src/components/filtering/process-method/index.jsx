@@ -2,7 +2,7 @@ import { useState } from 'react';
 import * as ReactDOM from 'react-dom';
 import { Grid, GridColumn as Column } from '@progress/kendo-react-grid';
 import { process } from '@progress/kendo-data-query';
-import { sampleProducts } from '../../data/sample-products';
+import { sampleProducts } from '../../../data/sample-products';
 import { ColumnMenuItem } from '@progress/kendo-react-data-tools';
 
 const initialDataState = {
