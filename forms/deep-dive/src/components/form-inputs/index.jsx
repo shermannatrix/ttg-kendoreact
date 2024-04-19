@@ -1,5 +1,5 @@
-import '@progress/kendo-theme-default/dist/all.css';
 import React from 'react';
+import '../../material-lime-dark.css';
 import { 
 	Form,
 	Field,
@@ -15,7 +15,8 @@ import {
 	FormSlider,
 	FormRangeSlider,
 	FormTextArea,
-	FormRating 
+	FormRating,
+	FormRadioGroup
 } from '../form-components';
 import { 
 	nameValidator,
@@ -23,6 +24,17 @@ import {
 	phoneValidator,
 	addressValidator
 } from '../form-components/validators';
+
+const confirmationData = [
+	{
+		label: "Phone Call",
+		value: "phone",
+	},
+	{
+		label: "Via Email",
+		value: "email",
+	},
+];
 
 export default function FormDemo () {
 	const handleSubmit = (dataItem) => 
@@ -113,6 +125,14 @@ export default function FormDemo () {
 						label={"Allow notifications"}
 						component={FormSwitch}
 						optional={true}
+					/>
+					<Field
+						id={"confirmationType"}
+						name={"confirmationType"}
+						label={"Type of Confirmation"}
+						hint={"Hint: Choose a way to receive a confirmation"}
+						component={FormRadioGroup}
+						data={confirmationData}
 					/>
 					<div className="k-form-buttons">
 						<Button
