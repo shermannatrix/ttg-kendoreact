@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/checkboxes-radiobuttons';
+import FormDemo from './components/dropdowns';
 
 function App() {
 	return (
