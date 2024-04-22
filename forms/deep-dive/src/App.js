@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/dropdowns';
+import FormDemo from './components/guidelines/error-messages';
 
 function App() {
 	return (
 		<div className="App">
-			<h1>Deep-diving into the Form Component in KendoReact!</h1>
+			<h1>Deep-diving into the Form<br />Component in KendoReact!</h1>
 			<FormDemo />
-			{/* <SimpleForm /> */}
-			{/* <FormsAndLabels /> */}
 		</div>
 	);
 }

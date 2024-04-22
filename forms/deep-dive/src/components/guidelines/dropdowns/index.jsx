@@ -7,9 +7,9 @@ import {
   FormComboBox,
   FormDropDownTree,
   FormMultiColumnComboBox,
-} from "../form-components";
-import { requiredValidator } from "../form-components/validators";
-import { countries, employees, genders, sizes, equipment } from "../../data";
+} from "../../form-components";
+import { requiredValidator } from "../../form-components/validators";
+import { countries, employees, genders, sizes, equipment } from "../../../data";
 import { Ripple } from '@progress/kendo-react-ripple';
 
 function FormDemo() {

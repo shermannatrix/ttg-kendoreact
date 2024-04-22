@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Field, FormElement } from '@progress/kendo-react-form';
 import { Button } from '@progress/kendo-react-buttons';
-import { FormCheckbox, FormRadioGroup } from '../form-components';
+import { FormCheckbox, FormRadioGroup } from '../../form-components';
 import { RadioButton } from '@progress/kendo-react-inputs';
 //import { genders } from '../../data';
 

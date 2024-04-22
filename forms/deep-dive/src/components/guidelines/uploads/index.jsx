@@ -1,7 +1,7 @@
 import React from 'react';
 import { Form, Field, FormElement } from '@progress/kendo-react-form';
 import { Button } from '@progress/kendo-react-buttons';
-import { FormUpload } from '../form-components';
+import { FormUpload } from '../../form-components';
 
 function FormDemo() {
 	const handleSubmit = (dataItem) =>

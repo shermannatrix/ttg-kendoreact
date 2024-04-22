@@ -16,13 +16,13 @@ import {
 	FormTextArea,
 	FormRating,
 	FormRadioGroup
-} from '../form-components';
+} from '../../form-components';
 import { 
 	nameValidator,
 	colorValidator,
 	phoneValidator,
 	addressValidator
-} from '../form-components/validators';
+} from '../../form-components/validators';
 
 const confirmationData = [
 	{
