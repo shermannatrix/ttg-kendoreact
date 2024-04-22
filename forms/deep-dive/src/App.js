@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/guidelines/groups-separators';
+import FormDemo from './components/custom-components/custom-behaviors';
 
 function App() {
 	return (
