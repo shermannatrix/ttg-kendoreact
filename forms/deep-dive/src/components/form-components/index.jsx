@@ -61,6 +61,7 @@ export const FormInput = (fieldRenderProps) => {
 			<Label
 				editorId={id}
 				editorValid={valid}
+        editorDisabled={disabled}
 				optional={optional}
 				className="k-form-label"
 			>
