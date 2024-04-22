@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/validations/fieldarray-validation';
+import FormDemo from './components/validations/form-validation';
 
 function App() {
 	return (
