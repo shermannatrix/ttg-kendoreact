@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/advanced-scenarios/reset-initial-state';
+import FormDemo from './components/validations/fieldarray-validation';
 
 function App() {
 	return (
