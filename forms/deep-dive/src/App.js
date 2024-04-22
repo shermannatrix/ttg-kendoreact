@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/custom-components/custom-behaviors';
+import FormDemo from './components/custom-components/reset-initial-state';
 
 function App() {
 	return (
