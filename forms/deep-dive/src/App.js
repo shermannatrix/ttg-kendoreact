@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/layouts/horizontal';
+import FormDemo from './components/labels';
 
 function App() {
 	return (
