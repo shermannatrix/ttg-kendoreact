@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/labels';
+import FormDemo from './components/setting-initial-values';
 
 function App() {
 	return (
