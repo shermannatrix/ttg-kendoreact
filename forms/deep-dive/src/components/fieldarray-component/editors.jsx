@@ -10,7 +10,11 @@ const DisplayValue = (fieldRenderProps) => {
 };
 
 const TextInputWithValidation = (fieldRenderProps) => {
-  const { validationMessage, visited, ...others } = fieldRenderProps;
+  const { 
+    validationMessage, 
+    visited, 
+    ...others 
+  } = fieldRenderProps;
 
   return (
     <div>
