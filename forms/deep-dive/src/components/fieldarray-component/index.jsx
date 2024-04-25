@@ -13,6 +13,7 @@ import {
 } from '@progress/kendo-react-grid';
 import { Button } from '@progress/kendo-react-buttons';
 import { Ripple } from '@progress/kendo-react-ripple';
+import { NameCell, NumberCell } from './editors';
 import { sampleProducts as products } from '../../data/sample-products';
 
 // Validate the entire Form
@@ -123,7 +124,117 @@ const FormGrid = (fieldArrayRenderProps) => {
 					name: ""
 				},
 			});
+			setEditIndex(0);
 		},
 		[fieldArrayRenderProps]
 	);
+
+	// Remove a new item to the Form FieldArray that will be removed from 
+	// the Grid.
+	const onRemove = useCallback(
+		(dataItem) => {
+			fieldArrayRenderProps.onRemove({
+				index: dataItem[FORM_DATA_INDEX],
+			});
+			setEditIndex(undefined);
+		}, [fieldArrayRenderProps]
+	);
+
+	// Update an item from the Grid and update the index of the edited item.
+	const onEdit = useCallback((dataItem, isNewItem) => {
+		if (!isNewItem) {
+			editItemCloneRef.current = clone(dataItem);
+		}
+		setEditIndex(dataItem[FORM_DATA_INDEX]);
+	}, []);
+
+	// Cancel the editing of an item and return its initial value.
+	const onCancel = useCallback(() => {
+		if (editItemCloneRef.current) {
+			fieldArrayRenderProps.onReplace({
+				index: editItemCloneRef.current[FORM_DATA_INDEX],
+				value: editItemCloneRef.current,
+			});
+		}
+		editItemCloneRef.current = undefined;
+		setEditIndex(undefined);
+	}, [fieldArrayRenderProps]);
+
+	// Save the changes.
+	const onSave = useCallback(() => {
+		console.log(fieldArrayRenderProps);
+		setEditIndex(undefined);
+	}, [fieldArrayRenderProps]);
+
+	const dataWithIndexes = fieldArrayRenderProps.value.map(
+		(item, index) => {
+			return {
+				...item,
+				[FORM_DATA_INDEX]: index,
+			};
+		}
+	);
+
+	return (
+		<FormGridEditContext.Provider
+			value={{
+				onCancel,
+				onEdit,
+				onRemove,
+				onSave,
+				editIndex,
+				parentField: name,
+			}}
+		>
+			{visited && validationMessage && <Error>{validationMessage}</Error>}
+			<Grid data={dataWithIndexes} dataItemKey={dataItemKey}>
+				<GridToolbar>
+					<Button
+						title="Add new"
+						themeColor={"primary"}
+						onClick={onAdd}
+					>
+						Add New
+					</Button>
+				</GridToolbar>
+				<Column field="ProductName" title="Name" cell={NameCell} />
+				<Column field="UnitsOnOrder" title="Units" cell={NumberCell} />
+				<Column cell={CommandCell} width="240px" />
+			</Grid>
+		</FormGridEditContext.Provider>
+	);
 };
+
+export default function FormDemo() {
+	const handleSubmit = (dataItem) => console.log(JSON.stringify(dataItem));
+
+	return (
+		<Ripple>
+			<Form
+				initialValues={{
+					products: products.splice(0, 5),
+				}}
+				onSubmit={handleSubmit}
+				render={(formRenderProps) => (
+					<FormElement>
+						<FieldArray
+							name="products"
+							dataItemKey={DATA_ITEM_KEY}
+							component={FormGrid}
+							validator={arrayLengthValidator}
+						/>
+						<div className="k-form-buttons">
+							<Button
+								type={"submit"}
+								themeColor={"primary"}
+								disabled={!formRenderProps.allowSubmit}
+							>
+								Submit
+							</Button>
+						</div>
+					</FormElement>
+				)}
+			/>
+		</Ripple>
+	);
+}

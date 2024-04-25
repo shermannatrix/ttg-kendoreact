@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import FormDemo from './components/setting-initial-values';
+import FormDemo from './components/fieldarray-component';
 
 function App() {
 	return (
