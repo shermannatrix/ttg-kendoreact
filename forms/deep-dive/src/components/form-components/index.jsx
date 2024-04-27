@@ -118,7 +118,7 @@ export const FormRadioGroup = (fieldRenderProps) => {
 			>
 				{label}
 			</Label>
-			<div classname={"k-form-field-wrap"}>
+			<div className={"k-form-field-wrap"}>
 				<RadioGroup
 					ariaDescribedBy={`${hintId} ${errorId}`}
 					ariaLabelledBy={labelId}
