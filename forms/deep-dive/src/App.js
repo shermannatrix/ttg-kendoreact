@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 //import FormWizardDemo from './components/form-wizard/first-example';
-import TextBoxDemo from './components/textboxes/validation-icons';
+import TextBoxDemo from './components/textboxes/adornments';
 
 function App() {
 	return (
